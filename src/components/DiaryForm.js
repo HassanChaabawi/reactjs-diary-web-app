@@ -13,16 +13,20 @@ export default function DiaryForm({ addItem }) {
             text: text
         }
         addItem(itemObject)
+        setTitle("")
+        setText("")
+        setDate("")
     }
 
     return (
         <div>
             <form onSubmit={onSubmit}>
                 <div className="diary-form">
-                    <input onChange={(event) => setTitle(event.target.value)} placeholder="Add an Item" className="diary-input"/>
-                    <input onChange={(event) => setDate(event.target.value)} type="date" className="diary-date-input"/>
+                    <input value={title} onChange={(event) => setTitle(event.target.value)} placeholder="Add an Item" className="diary-input"/>
+                    <input value={date} onChange={(event) => setDate(event.target.value)} type="date" className="diary-date-input"/>
                 </div>
-                <textarea onChange={(event) => setText(event.target.value)} rows="2" className="diary-textarea"/>
+                <textarea value={text} onChange={(event) => setText(event.target.value)} rows="2" className="diary-textarea">
+                </textarea>
                 <button type="submit" className="diary-button">Add Item To Diary</button>
             </form>
         </div>
