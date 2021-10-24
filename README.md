@@ -1,4 +1,4 @@
-A diary web app created with reactjs and redux persist from a youtube tutorial: https://youtu.be/KGEpXNf5NDs
+A diary web app created with reactjs and redux persist from a skillshare tutorial: https://www.skillshare.com/r/user/hassanchaabawi
 
 1 - run "npm install"
 
